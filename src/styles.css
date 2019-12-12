@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+html, body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    /* background: linear-gradient(270deg, #5a82b1, #13c597, #bf25ec, #7812ee); */
+    background: linear-gradient(270deg, #2C3E50, #28313B, #434343, #5B6467);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+}
+/* 
+body {
+    background: url(./assets/imgs/dik-lucky-draw.jpg) no-repeat center center fixed;
+    background-size: cover;
+  } */
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.menu-right {
+    right: 1%;
+    top: 1%;
+    position: absolute;
+    color: #ffffff;
+}
+
+.screen-margin {
+    margin-top: 50px;
+}
+
+.center-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.app-title {
+    color: #FFFFFF;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.tab-icon {
+    margin-right: 8px;
+}
+
+.contact {
+    width: 150px;
+    border: 1px solid #ffffff;
+    padding: 3mm;
+}
+
+.contact p {
+    font-size: 2mm;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.example-margin {
+    margin: 10px;
+  }
+  
+  .mat-slider-horizontal {
+    width: 300px;
+  }
+  
+  .mat-slider-vertical {
+    height: 300px;
+  }

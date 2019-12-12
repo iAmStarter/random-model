@@ -1,0 +1,54 @@
+<!-- <div class="left-top-menu">
+  <h4 class="text-light"> <i class="fa fa-random"></i> Random Game</h4>
+  <div class="row">
+    <div class="col">
+      <select id="my-input" [(ngModel)]="countDownVal.val" class="form-control">
+        <option [value]="item.val" *ngFor="let item of listCountTime">{{item.val}}</option>
+      </select>
+    </div>
+    <div class="col">
+      Sec
+    </div>
+  </div>
+</div> -->
+<h4 class="text-center text-light">
+    <i class="fa fa-gift"></i> จับฉลาก
+  </h4>
+  <hr>
+  
+  <div class="center-screen text-center">
+    <h1 *ngIf="randomItem != null" class="result-random text-light">{{randomItem.name}}</h1>
+    <!-- <button type="button" (click)="submit()" 
+    [ngClass]="{'fadeIn': !randomClicked,'bounceOut': randomClicked}" 
+    class="animated btn btn-award btn-circle btn-xl"><i
+        [ngClass]="{'fa-gift': randomList.length > 0 && !randomSuccess, 'fa-plus': randomList.length <= 0 && !randomSuccess, 'fa-check':randomSuccess}" class="fa fa-3x"></i>
+    </button> -->
+    <button type="button" (click)="submit()" class="animated btn btn-award btn-circle btn-xl">
+      <i [ngClass]="{'fa-cog fa-spin': randomList.length > 0 && !randomSuccess && randomClicked,
+        'fa-gift': randomList.length > 0 && !randomSuccess && !randomClicked, 
+        'fa-plus': randomList.length <= 0 && !randomSuccess, 
+        'fa-check':randomSuccess}" class="fa fa-3x">
+      </i>
+    </button>
+  </div>
+  <div class="pyro" *ngIf="randomSuccess">
+    <div class="before"></div>
+    <div class="after"></div>
+  </div>
+  <div class="container">
+    <div class="fixed-bottom">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="text-light">settings</mat-icon>
+      </button>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button (click)="openRandomDataDialog()" mat-menu-item>
+        <mat-icon>list</mat-icon>
+        <span>จัดการข้อมูล </span>
+      </button>
+      <button (click)="openTimeDialog()" mat-menu-item>
+        <mat-icon>access_time</mat-icon>
+        <span>เวลานับถอยหลัง {{countDownVal}}</span>
+      </button>
+    </mat-menu>
+  </div>
